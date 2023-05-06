@@ -63,11 +63,17 @@ function fonts() {
     .pipe(dest('dist/fonts'))
 }
 
+function images() {
+  return src('app/images/**/*')
+    .pipe(dest('dist/images'))
+}
+
 exports.styles = styles;
 exports.scripts = scripts;
 exports.watching = watching;
 exports.browsersync = browsersync;
 exports.fonts = fonts;
+exports.images = images;
 
-exports.build = series(cleanDist, building, fonts);
+exports.build = series(cleanDist, fonts, images, building);
 exports.default = parallel(styles, scripts, browsersync, watching);
