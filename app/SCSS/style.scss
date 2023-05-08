@@ -86,13 +86,15 @@ html{
     font-size: 64px;
   }
    
-  .title__index {
+  .title__index,
+  .footer__next-project__name_index {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
-  .title__index-text {
+  .title__index-text,
+  .footer__index-text{
     position: absolute;
     font-size: 32px;
   }
@@ -144,46 +146,101 @@ html{
   .footer {
     text-align: center;
   }
-  
-  .like {
-    display: flex;
-    border: none;
-    max-width: 100%;
-    font-size: 64px;
-    font-family: 'ApocNormal-Light';
-    font-weight: 400;
-    line-height: 58px;
-    background-color: inherit;
-  }
-  
-  .hearth {
-    margin-top: 290px;
-    margin-bottom: 262px;
-  }
 
-  .footer__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-  }
-  
-  .next-project__label {
-    padding-right: 32px;
-  }
-  
-  .next-project__name {
-    display: flex;
-    flex-direction: row;
-    padding-left: 24px;
-  }
-  
-  .next-project__name-index {
+  .like-block {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 24px;
+    position: relative;
+  }
+  
+  .footer__like {
+    position: absolute;
+    border: none;
+    background-color: inherit;
+    font-family: 'ApocNormal-Light';
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 58px;
+    z-index: 2;
+    left: 0;
+    cursor: pointer;
+  }
+  
+  .footer__hearth__main {
+    margin-top: 290px;
+    margin-bottom: 262px;
+    cursor: pointer;
   }
 
-  .arrow {
+  .footer__hearth__1 {
+    position: absolute;
+    left: -50px;
+    top: -95px;
+  }
+
+  .footer__hearth__2 {
+    position: absolute;
+    left: -50px;
+    top: 348px;
+  }
+
+  .footer__hearth__3 {
+    position: absolute;
+    left: 347px;
+    top: 150px;
+  }
+
+  .footer__hearth__4 {
+    position: absolute;
+    left: 407px;
+    top: 563px;
+  }
+
+  .footer__hearth__5 {
+    position: absolute;
+    left: 925px;
+    top: 0px;
+  }
+
+  .footer__hearth__6 {
+    position: absolute;
+    left: 1125px;
+    top: 363px;
+  }
+
+  .footer__hearth__7 {
+    position: absolute;
+    left: 1510px;
+    top: -95px;
+  }
+
+  .footer__hearth__8 {
+    position: absolute;
+    left: 1440px;
+    top: 547px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .footer__next-project {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  
+  .footer__next-project__name {
+    padding-right: 32px;
+  }
+
+  .footer__arrow {
     width: 100%;
+  }
+  
+  .footer__next-project__label {
+    display: flex;
+    padding-left: 28px;
   }
