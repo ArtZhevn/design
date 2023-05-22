@@ -45,7 +45,6 @@ html{
   
   body {
     font-family: 'ApocNormal-Light';
-    font-size: 64px;
     font-weight: 300;
     background-color: #fff;
   }
@@ -76,18 +75,13 @@ html{
   
   .title {
     display: flex;
-    align-items: flex-start;
+    align-items: baseline;
   }
   
-  .title__text {
-    font-size: 64px;
-  }
-   
-  .title__index,
-  .footer__next-project__name_index {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .title__text,
+  .footer__next-project__label-text {
+    font-size: calc( (100vw - 980px)/(1600 - 980) * (64 - 32) + 32px);
+    line-height: 58px;
   }
   
   .title__index-text,
@@ -95,8 +89,16 @@ html{
     position: absolute;
     font-size: 32px;
   }
+
+  .title__index-ellipse,
+  .footer__index-ellipse {
+    width: 5.15vw;
+    min-width: 5.15vw;
+  }
   
   .title__close {
+    width: 4.8vw;
+    min-width: 4.8vw;
     padding-top: 10px;
     cursor: url('../images/cursor.svg'), auto;
   }
@@ -124,9 +126,9 @@ html{
 
   .images_fullscreen, 
   .images_halfscreen,
-  .images_fullscreen_mobile_solo,
-  .images_halfscreen_mobile {
+  .images_fullscreen_mobile_solo {
     max-width: 100%;
+    padding-bottom: 12px;
   }
 
   .images_halfscreen {
@@ -135,6 +137,12 @@ html{
 
   .images_fullscreen_mobile {
     max-width: 49.5%;
+    padding-bottom: 11px;
+  }
+
+  .images_halfscreen_mobile {
+    max-width: 100%;
+    padding-bottom: 16px;
   }
 
   .images_doublescreen,
@@ -142,7 +150,7 @@ html{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
-    padding-bottom: 16px;
+    
   }
 
   .footer {
@@ -172,66 +180,71 @@ html{
     margin-top: 290px;
     margin-bottom: 262px;
     cursor: url('../images/cursor.svg'), auto;
+    width: 12vw;
+    min-width: 12vw;
   }
 
   .footer__hearth__1 {
     position: absolute;
-    left: -45px;
-    top: -80px;
+    left: calc( (100vw - 980px)/(1600 - 980) * (-50 + 40) - 40px);
+    top: calc( (100vw - 980px)/(1600 - 980) * (-95 + 57) - 57px);
   }
 
   .footer__hearth__2 {
     position: absolute;
-    left: -50px;
-    top: 348px;
+    left: calc( (100vw - 980px)/(1600 - 980) * (-50 + 40) - 40px);
+    top: calc( (100vw - 980px)/(1600 - 980) * (348 - 300) + 300px);
   }
 
   .footer__hearth__3 {
     position: absolute;
-    left: 347px;
-    top: 150px;
+    left: calc( (100vw - 980px)/(1600 - 980) * (347 - 150) + 150px);
+    top: calc( (100vw - 980px)/(1600 - 980) * (150 - 140) + 140px);
   }
 
   .footer__hearth__4 {
     position: absolute;
-    left: 407px;
-    top: 563px;
+    left: calc( (100vw - 980px)/(1600 - 980) * (407 - 190) + 190px);
+    top: calc( (100vw - 980px)/(1600 - 980) * (500 - 500) + 500px);
   }
 
   .footer__hearth__5 {
     position: absolute;
-    left: 925px;
-    top: 0px;
+    left: calc( (100vw - 980px)/(1600 - 980) * (925 - 550) + 550px);
+    top: calc( (100vw - 980px)/(1600 - 980) * (0 + 0) + 0px);
   }
 
   .footer__hearth__6 {
     position: absolute;
-    left: 1125px;
-    top: 363px;
+    left: calc( (100vw - 980px)/(1600 - 980) * (1125 - 650) + 650px);
+    top: calc( (100vw - 980px)/(1600 - 980) * (363 - 300) + 300px);
   }
 
   .footer__hearth__7 {
     position: absolute;
-    left: 1510px;
-    top: -80px;
+    left: calc( (100vw - 980px)/(1600 - 980) * (1410 - 860) + 860px);
+    top: calc( (100vw - 980px)/(1600 - 980) * (-95 + 57) - 57px);
   }
 
   .footer__hearth__8 {
     position: absolute;
-    left: 1440px;
-    top: 547px;
+    left: calc( (100vw - 980px)/(1600 - 980) * (1410 - 800) + 800px);
+    top: calc( (100vw - 980px)/(1600 - 980) * (500 - 500) + 500px);
   }
 
   .hidden {
-    transform: translateY(900px);
+    transform: translateY(1000px);
     opacity: 0;
     transition: transform 0s ease-in-out, opacity 0s ease-in-out;
+
   }
 
   .visible {
     transform: translateY(-800px);
     opacity: 1;
     transition: opacity 5s ease-in-out, transform 5s ease-in-out;
+    width: 12vw;
+    min-width: 12vw;
   }
 
   .link {
@@ -263,7 +276,6 @@ html{
   .footer__next-project__label {
     display: flex;
     padding-left: calc( (100vw - 980px)/(1600 - 980) * (28 - 10) + 10px);
-    font-size: 64px;
     align-items: center;
   }
 
