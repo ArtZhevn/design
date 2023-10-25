@@ -95,13 +95,21 @@ html{
     width: 5.15vw;
     min-width: 5.15vw;
   }
+
+  .close__link {
+    padding-top: 10px;
+  }
   
   .title__close {
     width: 4.8vw;
     min-width: 4.8vw;
-    padding-top: 10px;
     cursor: url('../images/cursor.svg'), auto;
+    transition: transform 0.3s ease-in-out;
   }
+
+  .title__close:hover {
+    transform: rotate(180deg);
+    }
   
   .description__text {
     margin: 101px 432px 109px 0;
@@ -282,4 +290,3 @@ html{
   .footer__index-text {
     font-size: 32px;
 }
-
